@@ -1,0 +1,15 @@
+/* Wider panel buttons: default is 12px natural / 6px minimum. */
+#panel .panel-button {
+  -natural-hpadding: 16px;
+  -minimum-hpadding: 8px;
+}
+
+/* Gaps between Wi-Fi / Bluetooth / battery etc. inside the quick-settings button (default 4px). */
+#panel .panel-button .panel-status-indicators-box {
+  spacing: 16px;
+}
+
+/* Battery icon + percentage stay together. */
+#panel .power-status.panel-status-indicators-box {
+  spacing: 4px;
+}

@@ -1,0 +1,6 @@
+{
+  "uuid": "roomy-panel@jasperblues.github.io",
+  "name": "Roomy Panel",
+  "description": "macOS-style breathing room between top-bar items and status icons.",
+  "shell-version": ["50", "51"]
+}
