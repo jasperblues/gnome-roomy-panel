@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <enum id="org.gnome.shell.extensions.roomy-panel.ClockPosition">
+    <value nick="left" value="0"/>
+    <value nick="center" value="1"/>
+    <value nick="right" value="2"/>
+  </enum>
+  <schema id="org.gnome.shell.extensions.roomy-panel" path="/org/gnome/shell/extensions/roomy-panel/">
+    <key name="clock-position" enum="org.gnome.shell.extensions.roomy-panel.ClockPosition">
+      <default>'left'</default>
+      <summary>Where the clock sits in the top bar</summary>
+      <description>Moving the clock out of the centre gives the right side room for tray icons, so their labels don't get cut off.</description>
+    </key>
+  </schema>
+</schemalist>

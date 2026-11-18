@@ -8,7 +8,7 @@ A tiny GNOME Shell extension that gives the top bar macOS-style breathing room.
 
 GNOME packs the right side of the top bar tightly: the Wi-Fi, Bluetooth and battery icons sit only 4px apart, and every panel button gets 12px of padding. Next to the macOS menu bar, where items sit roughly 16–20px apart, it looks cramped, especially once you add a few extension indicators and tray icons.
 
-Roomy Panel is CSS only. There's no logic and nothing runs in the background. Because it ships as an extension rather than an edited theme, it survives GNOME and theme updates and is easy to turn off.
+Roomy Panel is almost all CSS. The only code moves the clock, and nothing runs in the background. Because it ships as an extension rather than an edited theme, it survives GNOME and theme updates and is easy to turn off.
 
 | | GNOME default | Roomy Panel |
 |---|---|---|
@@ -18,11 +18,30 @@ Roomy Panel is CSS only. There's no logic and nothing runs in the background. Be
 
 The wider button padding applies to everything in the top bar: extension indicators, tray icons, the clock and so on.
 
+### The clock moves to the left
+
+GNOME centres the clock and gives the left and right sides of the bar equal width. The left side is usually close to empty, while the right side fills up with tray icons. When the right side runs out of room, GNOME cuts off text labels such as the battery percentage ("8…"). Moving the clock to the left gives that space back to the right side.
+
+To put it back in the centre, or next to the status icons on the right:
+
+```sh
+schemas=~/.local/share/gnome-shell/extensions/roomy-panel@jasperblues.github.io/schemas
+gsettings --schemadir $schemas set org.gnome.shell.extensions.roomy-panel clock-position center   # or left, right
+```
+
+This takes effect straight away.
+
 ## Install
 
 ```sh
 git clone https://github.com/jasperblues/gnome-roomy-panel.git \
   ~/.local/share/gnome-shell/extensions/roomy-panel@jasperblues.github.io
+```
+
+Compile the settings schema:
+
+```sh
+glib-compile-schemas ~/.local/share/gnome-shell/extensions/roomy-panel@jasperblues.github.io/schemas
 ```
 
 Log out and back in (GNOME on Wayland only discovers new extensions at login), then:
@@ -35,7 +54,7 @@ Supports GNOME Shell 50 and 51.
 
 ## Tuning
 
-All the numbers are in [`stylesheet.css`](stylesheet.css). Edit them to taste, then log out and back in. GNOME doesn't reload an extension's stylesheet while it's running.
+All the spacing numbers are in [`stylesheet.css`](stylesheet.css). Edit them to taste, then log out and back in. GNOME doesn't reload an extension's stylesheet while it's running.
 
 ## See also
 
