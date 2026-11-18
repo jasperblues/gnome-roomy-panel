@@ -2,5 +2,10 @@
   "uuid": "roomy-panel@jasperblues.github.io",
   "name": "Roomy Panel",
   "description": "macOS-style breathing room between top-bar items and status icons.",
-  "shell-version": ["50", "51"]
+  "shell-version": [
+    "50",
+    "51"
+  ],
+  "url": "https://github.com/jasperblues/gnome-roomy-panel",
+  "version-name": "1.0"
 }
