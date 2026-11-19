@@ -27,8 +27,8 @@ export default class RoomyPanel extends Extension {
             this._moveClock(Main.panel._leftBox, -1);
             break;
         case 'right':
-            // Just left of the tray icons and status area, like the macOS menu bar's clock neighbours.
-            this._moveClock(Main.panel._rightBox, 0);
+            // Far right, after the status area, as in the macOS menu bar.
+            this._moveClock(Main.panel._rightBox, -1);
             break;
         default:
             this._moveClock(this._home, this._homeIndex);

@@ -18,15 +18,15 @@ Roomy Panel is almost all CSS. The only code moves the clock, and nothing runs i
 
 The wider button padding applies to everything in the top bar: extension indicators, tray icons, the clock and so on.
 
-### The clock moves to the left
+### The clock moves to the right
 
-GNOME centres the clock and gives the left and right sides of the bar equal width. The left side is usually close to empty, while the right side fills up with tray icons. When the right side runs out of room, GNOME cuts off text labels such as the battery percentage ("8…"). Moving the clock to the left gives that space back to the right side.
+GNOME centres the clock and gives the left and right sides of the bar equal width. The left side is usually close to empty, while the right side fills up with tray icons. When the right side runs out of room, GNOME cuts off text labels such as the battery percentage ("8…"). Moving the clock to the far right, after the status icons as on a Mac, empties the centre so the right side can use that space.
 
-To put it back in the centre, or next to the status icons on the right:
+To put it back in the centre, or over on the left:
 
 ```sh
 schemas=~/.local/share/gnome-shell/extensions/roomy-panel@jasperblues.github.io/schemas
-gsettings --schemadir $schemas set org.gnome.shell.extensions.roomy-panel clock-position center   # or left, right
+gsettings --schemadir $schemas set org.gnome.shell.extensions.roomy-panel clock-position center   # or left, right (default)
 ```
 
 This takes effect straight away.
