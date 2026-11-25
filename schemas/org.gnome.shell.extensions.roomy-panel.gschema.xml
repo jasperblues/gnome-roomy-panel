@@ -11,5 +11,15 @@
       <summary>Where the clock sits in the top bar</summary>
       <description>Moving the clock out of the centre gives the right side room for tray icons, so their labels don't get cut off.</description>
     </key>
+    <key name="hidden-items" type="as">
+      <default>[]</default>
+      <summary>Top-bar items to hide</summary>
+      <description>Stable item names as listed in known-items: "tray:ID" for tray icons (the app's StatusNotifierItem ID, or its window class for old-style tray icons), otherwise the panel role, such as an extension's UUID.</description>
+    </key>
+    <key name="known-items" type="a{ss}">
+      <default>{}</default>
+      <summary>Top-bar items seen so far</summary>
+      <description>Written by the extension: item name to display label. The preferences window lists these so you can pick what to hide.</description>
+    </key>
   </schema>
 </schemalist>

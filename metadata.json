@@ -1,12 +1,12 @@
 {
   "uuid": "roomy-panel@jasperblues.github.io",
   "name": "Roomy Panel",
-  "description": "macOS-style breathing room in the top bar: wider spacing, and the clock moved out of the way.",
+  "description": "macOS-style breathing room in the top bar: wider spacing, the clock moved out of the way, and a switch to hide each item you don't need.",
   "shell-version": [
     "50",
     "51"
   ],
   "url": "https://github.com/jasperblues/gnome-roomy-panel",
-  "version-name": "1.1",
+  "version-name": "1.2",
   "settings-schema": "org.gnome.shell.extensions.roomy-panel"
 }
